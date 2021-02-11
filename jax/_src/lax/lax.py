@@ -2028,7 +2028,6 @@ def standard_abstract_eval(prim, shape_rule, dtype_rule, weak_type_rule,
                  shape, dtype, weak_type, named_shape in safe_zip(
                      shapes, dtypes, weak_types, named_shapes)]
   elif least_specialized is UnshapedArray:
-    # TODO named shapes here too?
     dtypes = dtype_rule(*args, **kwargs)
     if not prim.multiple_results:
       dtypes, weak_types = [dtypes], [weak_types]
